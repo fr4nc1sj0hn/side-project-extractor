@@ -1,6 +1,8 @@
 import pandas as pd
 from os import listdir
 from os.path import isfile, join
+import sys
+import warnings
 
 class LogParser():
     def __init__(self,path,isFolder):
@@ -10,12 +12,14 @@ class LogParser():
         df = pd.DataFrame(columns=columns)
         self.parsedLog = df
         
-        if isFolder == 'Y':
-            files = [path + f for f in listdir(self.path) if isfile(join(self.path, f))]
-            for file in files:
-                self.ParseLogs(file)
-        else:
-            self.ParseLogs(self.path)
+        with warnings.catch_warnings():
+            warnings.simplefilter("ignore")
+            if isFolder == 'Y':
+                files = [path + f for f in listdir(self.path) if isfile(join(self.path, f))]
+                for file in files:
+                    self.ParseLogs(file)
+            else:
+                self.ParseLogs(self.path)
         
     def ParseLogs(self,file):
         #placeholder columns to get all data
@@ -33,7 +37,7 @@ class LogParser():
         ]
         columnPlaceholder = columnPlaceholder + ['col' + str(i) for i in range(100)]
         print("processing",file)
-        df = pd.read_csv(file, sep='\t', lineterminator='\n',names=columnPlaceholder)
+        df = pd.read_csv(file, sep='\t', lineterminator='\n',names=columnPlaceholder, on_bad_lines='skip')
         
         #step 1
         #Table.RemoveColumns({"Error Code", "Application", "Machine", "Category", "Event Type", "Thread ID", "User", "Source.Name"})
@@ -154,7 +158,10 @@ class LogParser():
 
 if __name__ == "__main__":
     path = sys.argv[1]
-    parser = LogParser(path=path,isFolder = 'Y')
+    isFolder = sys.argv[2]
+    print(path)
+    parser = LogParser(path=path,isFolder = isFolder)
     print("first 10 rows...")
     print("========================================================================")
     print(parser.parsedLog.head(10))
+    print("rows and columns",parser.parsedLog.shape)
