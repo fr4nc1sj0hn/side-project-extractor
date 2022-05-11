@@ -153,7 +153,7 @@ class LogParser():
         step16["Time"] = step16['Timestamp'].dt.time
         
         self.parsedLog = pd.concat([self.parsedLog,step16],ignore_index=True)
-
+        self.parsedLog.to_csv("logcompiled.csv")
 
 
 if __name__ == "__main__":
