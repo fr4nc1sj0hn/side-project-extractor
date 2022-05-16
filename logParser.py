@@ -7,6 +7,8 @@ import warnings
 import config as cfg
 import datetime
 import time
+from support import get_SP_drive, save_file_to_SP_folder, send_failure_mail
+
 
 class LogParser():
     def __init__(self,path,isFolder, LocalCSVLocation, SharepointLocation,UploadToSharePoint):
@@ -166,6 +168,14 @@ class LogParser():
             self.parsedLog = pd.concat([self.parsedLog,step16],ignore_index=True)
 
 
+
+def save_to_archive(df, out_path, drive):
+    save_file_to_SP_folder(drive, out_path, df.to_csv(index=False).encode())
+
+    return(None)
+
+
+
 if __name__ == "__main__":
     path = cfg.logfolderlocation
     LocalCSVLocation = cfg.LocalCSVLocation
@@ -173,11 +183,11 @@ if __name__ == "__main__":
     UploadToSharePoint = cfg.UploadToSharePoint
 
     isFolder = cfg.isFolder
-    print(path)
+
     parser = LogParser(path=path,isFolder = isFolder,LocalCSVLocation = LocalCSVLocation, SharepointLocation = SharepointLocation, UploadToSharePoint = UploadToSharePoint)
     
 
-    print("reading files from", path)
+    print("reading files from: ", path)
     print("first 10 rows...")
     print("========================================================================")
 
@@ -192,6 +202,30 @@ if __name__ == "__main__":
             parser.parsedLog.to_csv(fullPath, mode='a', header=False,index=False)
     else:
         print("SharePoint Implem not yet finished")
+
+    
+
+    drive = get_SP_drive(cfg.SP_cfg)
+    print("drive: ",drive)
+    if drive is None:
+        print("Could not connect to SharePoint")
+        #send_failure_mail(cfg.failure_mail_recipients, "Could not connect to SharePoint, no extractions were made at all")
+        #sys.exit()
+    
+    tool = cfg.tool
+    out_path_template = "%s<YEAR>/%s_%s_<YEAR>A.csv" % (cfg.SP_cfg["SharePoint_Path"][tool], cfg.fname_prefix, tool)
         
+    year = str(datetime.date.today().year) 
+
+    out_path = out_path_template.replace("<YEAR>", str(year))
+    print("out_path: ",out_path)
+
+    dfp = parser.parsedLog
     print(parser.parsedLog.head(10))
+    print("============================================================")
     print("rows and columns",parser.parsedLog.shape)
+
+    result = save_to_archive(dfp, out_path, drive)
+    if result is not None:
+        print("there is a result")
+        #end_failure_mail(cfg.failure_mail_recipients, result)
