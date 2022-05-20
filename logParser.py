@@ -133,11 +133,21 @@ class LogParser():
             logs[["Log Message.2.1","Log Message.2.2", "Log Message.2.3"]] = logs['Log Message.2'].str.split("\\", expand=True)
             
             #step13 Table.SplitColumn("Log Message.2.3", Splitter.SplitTextByEachDelimiter({"Wafer ID: "}, QuoteStyle.Csv, false), {"Log Message.2.3.1", "Log Message.2.3.2"})
-            logs[["Log Message.2.3.1","Log Message.2.3.2"]] = logs['Log Message.2.3'].str.split("Wafer ID: ", expand=True)
-            
+            try:
+                logs[["Log Message.2.3.1","Log Message.2.3.2"]] = logs['Log Message.2.3'].str.split("Wafer ID: ", expand=True)
+            except ValueError:
+                logs["Log Message.2.3.1"] = logs['Log Message.2.3']
+                logs["Log Message.2.3.2"] = ""
+    
+
             #step14 Table.SplitColumn("Log Message.2.3.2", Splitter.SplitTextByEachDelimiter({"Port No: "}, QuoteStyle.Csv, false), {"Log Message.2.3.2.1", "Log Message.2.3.2.2"})
-            logs[["Log Message.2.3.2.1","Log Message.2.3.2.2"]] = logs['Log Message.2.3.2'].str.split("Port No: ", expand=True)
-            
+            try:
+                logs[["Log Message.2.3.2.1","Log Message.2.3.2.2"]] = logs['Log Message.2.3.2'].str.split("Port No: ", expand=True)
+            except ValueError:
+                logs["Log Message.2.3.2.1"] = logs['Log Message.2.3.2']
+                logs["Log Message.2.3.2.2"] = ""
+
+
             #step 15 
             """
             Table.RenameColumns({
@@ -201,31 +211,29 @@ if __name__ == "__main__":
         else: # else it exists so append without writing the header
             parser.parsedLog.to_csv(fullPath, mode='a', header=False,index=False)
     else:
-        print("SharePoint Implem not yet finished")
+        print("SharePoint Implem not yet properly working, errors are expected")
 
-    
-
-    drive = get_SP_drive(cfg.SP_cfg)
-    print("drive: ",drive)
-    if drive is None:
-        print("Could not connect to SharePoint")
-        #send_failure_mail(cfg.failure_mail_recipients, "Could not connect to SharePoint, no extractions were made at all")
-        #sys.exit()
-    
-    tool = cfg.tool
-    out_path_template = "%s<YEAR>/%s_%s_<YEAR>A.csv" % (cfg.SP_cfg["SharePoint_Path"][tool], cfg.fname_prefix, tool)
+        drive = get_SP_drive(cfg.SP_cfg)
+        print("drive: ",drive)
+        if drive is None:
+            print("Could not connect to SharePoint")
+            #send_failure_mail(cfg.failure_mail_recipients, "Could not connect to SharePoint, no extractions were made at all")
+            #sys.exit()
         
-    year = str(datetime.date.today().year) 
+        tool = cfg.tool
+        out_path_template = "%s<YEAR>/%s_%s_<YEAR>A.csv" % (cfg.SP_cfg["SharePoint_Path"][tool], cfg.fname_prefix, tool)
+            
+        year = str(datetime.date.today().year) 
 
-    out_path = out_path_template.replace("<YEAR>", str(year))
-    print("out_path: ",out_path)
+        out_path = out_path_template.replace("<YEAR>", str(year))
+        print("out_path: ",out_path)
 
-    dfp = parser.parsedLog
-    print(parser.parsedLog.head(10))
-    print("============================================================")
-    print("rows and columns",parser.parsedLog.shape)
+        dfp = parser.parsedLog
+        print(parser.parsedLog.head(10))
+        print("============================================================")
+        print("rows and columns",parser.parsedLog.shape)
 
-    result = save_to_archive(dfp, out_path, drive)
-    if result is not None:
-        print("there is a result")
-        #end_failure_mail(cfg.failure_mail_recipients, result)
+        result = save_to_archive(dfp, out_path, drive)
+        if result is not None:
+            print("there is a result")
+            #end_failure_mail(cfg.failure_mail_recipients, result)

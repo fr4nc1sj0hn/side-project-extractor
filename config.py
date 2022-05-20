@@ -20,6 +20,6 @@ fname_prefix = "OS"
 logfolderlocation = "C:/Users/Francis John Picaso/Repositories/Teo/logs/"
 isFolder = 'Y'
 LocalCSVLocation = "C:/Users/Francis John Picaso/Repositories/Teo/Output/"
-UploadToSharePoint = "Y"
+UploadToSharePoint = "N"
 
 tool = "KLA2925"
