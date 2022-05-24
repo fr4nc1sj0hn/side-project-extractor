@@ -1,0 +1,13 @@
+Port No,1
+Carrier ID,005350860000IMEC
+Slot No,7
+Lot ID,E222108-7222
+Sample ID,Slot07
+Recipe ID,PLINE200\BLANKET\Rq_B01_5x5_512-GaN
+
+Tip Port No,1
+Tip Cassette ID,Cassette1
+Tip Slot No,4
+
+Point No,X (um),Y (um),Method ID,State,FileName,Date,Tilt
+1,0.0,0.0,PLINE_Rq_5x5_512_GaN,COMPLETED,E222108-7222_Slot07_PLINE_Rq_5x5_512_GaN_0001,2022/05/21 04:33:53,38_CENTER

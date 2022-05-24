@@ -1,0 +1,359 @@
+
+
+Time,Parent Job,Current Job,Step,Param ID,Param Value,Tack Time
+2022/05/23 04:58:57,AutoSampleProcessJob,LoadJob,STARTED,-,-
+2022/05/23 04:58:57,AutoSampleProcessJob,LoadJob,Start load sample,Port No,1,0.001
+,,,,Slot No,6
+2022/05/23 04:59:02,AutoSampleProcessJob,LoadJob,Unload from port (Lower),-,-,5.106
+2022/05/23 04:59:06,AutoSampleProcessJob,LoadJob,Load to aligner (Lower),-,-,3.657
+2022/05/23 04:59:17,AutoSampleProcessJob,LoadJob,Align,Align Angle,270,11.403
+2022/05/23 04:59:20,AutoSampleProcessJob,LoadJob,Unload from aligner (Lower),-,-,2.456
+2022/05/23 04:59:32,AutoSampleProcessJob,LoadJob,Load to stage (Lower),-,-,12.338
+2022/05/23 04:59:32,AutoSampleProcessJob,LoadJob,DONE,-,-,0.023,34.995
+2022/05/23 04:59:32,AutoSampleProcessJob,AutoSampleProcessKernelJob,STARTED,-,-
+2022/05/23 04:59:32,AutoSampleProcessKernelJob,FanSpeedControlJob,STARTED,-,-
+2022/05/23 04:59:32,AutoSampleProcessKernelJob,FanSpeedControlJob,Set fan speed,Fan Speed,60,0.00
+2022/05/23 04:59:32,AutoSampleProcessKernelJob,FanSpeedControlJob,DONE,-,-,0.00,0.003
+2022/05/23 04:59:32,AutoSampleProcessKernelJob,VacuumJob,STARTED,-,-
+2022/05/23 04:59:34,AutoSampleProcessKernelJob,VacuumJob,Vacuum On,Index,0,1.711
+2022/05/23 04:59:34,AutoSampleProcessKernelJob,VacuumJob,DONE,-,-,0.00,1.714
+2022/05/23 04:59:34,AutoSampleProcessKernelJob,IonizerOnJob,STARTED,-,-
+2022/05/23 04:59:35,AutoSampleProcessKernelJob,IonizerOnJob,Ionizer On,-,-,1.563
+2022/05/23 04:59:35,AutoSampleProcessKernelJob,IonizerOnJob,DONE,-,-,0.00,3.277
+2022/05/23 04:59:35,AutoSampleProcessKernelJob,AutoTipExchangeJob,STARTED,-,-
+2022/05/23 04:59:36,AutoSampleProcessKernelJob,AutoTipExchangeJob,DONE,-,-,0.171,3.448
+2022/05/23 04:59:36,AutoSampleProcessKernelJob,TipAutoFocusPatternJob,STARTED,-,-
+2022/05/23 04:59:36,AutoSampleProcessKernelJob,TipAutoFocusPatternJob,Rotates to Center,-,-,0.86
+2022/05/23 04:59:40,AutoSampleProcessKernelJob,TipAutoFocusPatternJob,Coarse tip auto focus,-,-,3.622
+2022/05/23 04:59:41,AutoSampleProcessKernelJob,TipAutoFocusPatternJob,Coarse tip pattern align,-,-,0.67
+2022/05/23 04:59:43,AutoSampleProcessKernelJob,TipAutoFocusPatternJob,Fine tip auto focus,-,-,2.234
+2022/05/23 04:59:44,AutoSampleProcessKernelJob,TipAutoFocusPatternJob,Fine tip pattern align,-,-,0.779
+2022/05/23 04:59:44,AutoSampleProcessKernelJob,TipAutoFocusPatternJob,Tip Auto focus & Pattern match,Autofocus ID - Tip,,0.02
+,,,,Pattern ID - Tip,
+,,,,Focus Position - Tip,4817.699707
+2022/05/23 04:59:44,AutoSampleProcessKernelJob,TipAutoFocusPatternJob,DONE,-,-,0.024,11.657
+2022/05/23 04:59:44,AutoSampleProcessKernelJob,MappingJob,STARTED,-,-
+2022/05/23 04:59:44,AutoSampleProcessKernelJob,MappingJob,Set Mapping,Link Tool,false,0.00
+,,,,Tool Type ID,
+,,,,Tool ID,
+2022/05/23 04:59:44,AutoSampleProcessKernelJob,MappingJob,DONE,-,-,0.00,11.657
+2022/05/23 04:59:44,AutoSampleProcessKernelJob,SampleSettingJob,STARTED,-,-
+2022/05/23 04:59:44,AutoSampleProcessKernelJob,SampleSettingJob,Set Sample,-,-,0.00
+2022/05/23 04:59:44,AutoSampleProcessKernelJob,SampleSettingJob,DONE,-,-,0.00,11.657
+2022/05/23 04:59:44,AutoSampleProcessKernelJob,DieSampleAlignJob,STARTED,-,-
+2022/05/23 04:59:44,AutoSampleProcessKernelJob,DieSampleAlignJob,Update Mapping,Link Tool,false,0.341
+,,,,Tool Type ID,
+,,,,Tool ID,
+2022/05/23 04:59:44,AutoSampleProcessKernelJob,DieSampleAlignJob,Prepare Vision,-,-,0.021
+2022/05/23 04:59:44,AutoSampleProcessKernelJob,DieSampleAlignJob,Rotates to Center,-,-,0.011
+2022/05/23 04:59:50,AutoSampleProcessKernelJob,DieSampleAlignJob,Move to align point 1,X Position,4282.91,5.545
+,,,,Y Position,1598.2
+2022/05/23 05:00:04,AutoSampleProcessKernelJob,DieSampleAlignJob,Sample auto focus - Point 1,Autofocus ID - Sample,,13.91
+,,,,Reflected Sample,false
+2022/05/23 05:00:05,AutoSampleProcessKernelJob,DieSampleAlignJob,Pattern align - 1,Pattern ID - Sample,,1.114
+,,,,Align Mode,StageMoveWithResult
+,,,,Match Only,true
+2022/05/23 05:00:08,AutoSampleProcessKernelJob,DieSampleAlignJob,Move to align point 2,X Position,55842.91,3.211
+,,,,Y Position,1598.2
+2022/05/23 05:00:16,AutoSampleProcessKernelJob,DieSampleAlignJob,Sample auto focus - Point 2,Autofocus ID - Sample,,7.555
+,,,,Reflected Sample,false
+2022/05/23 05:00:17,AutoSampleProcessKernelJob,DieSampleAlignJob,Pattern align - 2,Pattern ID - Sample,,1.163
+,,,,Align Mode,StageMoveWithResult
+,,,,Match Only,true
+2022/05/23 05:00:20,AutoSampleProcessKernelJob,DieSampleAlignJob,Move to align point 3,X Position,4282.91,3.185
+,,,,Y Position,55998.2
+2022/05/23 05:00:27,AutoSampleProcessKernelJob,DieSampleAlignJob,Sample auto focus - Point 3,Autofocus ID - Sample,,7.582
+,,,,Reflected Sample,false
+2022/05/23 05:00:29,AutoSampleProcessKernelJob,DieSampleAlignJob,Pattern align - 3,Pattern ID - Sample,,1.097
+,,,,Align Mode,StageMoveWithResult
+,,,,Match Only,true
+2022/05/23 05:00:29,AutoSampleProcessKernelJob,DieSampleAlignJob,Apply align,-,-,0.511
+2022/05/23 05:00:29,AutoSampleProcessKernelJob,DieSampleAlignJob,DONE,-,-,0.00,56.903
+2022/05/23 05:00:29,AutoSampleProcessKernelJob,SampleSequenceJob,STARTED,-,-
+2022/05/23 05:00:29,SampleSequenceJob,DefaultSiteProcessJob,STARTED,-,-
+2022/05/23 05:00:29,DefaultSiteProcessJob,DefaultImagePointProcessJob,STARTED,-,-
+2022/05/23 05:00:29,DefaultImagePointProcessJob,ImagePointProcessJob,STARTED,-,-
+2022/05/23 05:00:29,ImagePointProcessJob,FanSpeedControlJob,STARTED,-,-
+2022/05/23 05:00:29,ImagePointProcessJob,FanSpeedControlJob,Set fan speed,Fan Speed,60,0.00
+2022/05/23 05:00:29,ImagePointProcessJob,FanSpeedControlJob,DONE,-,-,0.00,57.062
+2022/05/23 05:00:29,ImagePointProcessJob,PositioningJob,STARTED,-,-
+2022/05/23 05:00:30,ImagePointProcessJob,PositioningJob,Move Z stage,Z Position,10260.82,0.343
+2022/05/23 05:00:30,ImagePointProcessJob,PositioningJob,Rotates to Center,-,-,0.003
+2022/05/23 05:00:33,ImagePointProcessJob,PositioningJob,Move XY,X Position,74.92,3.123
+,,,,Y Position,-106.81
+,,,,Stage Coordinate,true
+2022/05/23 05:00:33,ImagePointProcessJob,PositioningJob,Align the PSPD,-,-,0.002
+2022/05/23 05:00:33,ImagePointProcessJob,PositioningJob,DONE,-,-,0.001,60.534
+2022/05/23 05:00:33,ImagePointProcessJob,XyDetectorCalJob,STARTED,-,-
+2022/05/23 05:00:33,ImagePointProcessJob,XyDetectorCalJob,XY Detector Cal. is too short, skip it.,-,-,0.00
+2022/05/23 05:00:33,ImagePointProcessJob,XyDetectorCalJob,DONE,-,-,0.00,60.534
+2022/05/23 05:00:33,ImagePointProcessJob,ImageInitJob,STARTED,-,-
+2022/05/23 05:00:33,ImagePointProcessJob,ImageInitJob,Initialize image mode,-,-,0.00
+2022/05/23 05:00:33,ImagePointProcessJob,ImageInitJob,DONE,-,-,0.00,60.534
+2022/05/23 05:00:33,ImagePointProcessJob,ZPositioningJob,STARTED,-,-
+2022/05/23 05:00:40,ImagePointProcessJob,ZPositioningJob,Sample auto focus,Fine Only,false,7.651
+,,,,Autofocus ID - Sample,
+2022/05/23 05:00:40,ImagePointProcessJob,ZPositioningJob,Save the autofocus result,Focus Distance,1178.840938,0.00
+,,,,Focus Position - Tip,4797.38
+,,,,Z Position - Sample,10260.898405
+,,,,Focus Position - Sample,3618.539062
+2022/05/23 05:00:41,ImagePointProcessJob,ZPositioningJob,Sample pattern align - coarse & center,-,-,0.891
+2022/05/23 05:00:43,ImagePointProcessJob,ZPositioningJob,Move Focus & Z to sample,Focus Position - Tip,4797.38,1.651
+,,,,Move Z,-278.840938
+2022/05/23 05:00:44,ImagePointProcessJob,ZPositioningJob,DONE,-,-,1.411,72.138
+2022/05/23 05:00:44,ImagePointProcessJob,FanSpeedControlJob,STARTED,-,-
+2022/05/23 05:00:45,ImagePointProcessJob,FanSpeedControlJob,Set fan speed,Fan Speed,10,0.377
+2022/05/23 05:00:45,ImagePointProcessJob,FanSpeedControlJob,DONE,-,-,0.00,72.515
+2022/05/23 05:00:45,ImagePointProcessJob,ImageJob,STARTED,-,-
+2022/05/23 05:00:52,ImagePointProcessJob,ImageJob,Sweep frequency,Amplitude Only,true,7.027
+,,,,Intermittent,false
+,,,,Amplitude,9.92
+,,,,Set Point,0.005954
+2022/05/23 05:01:13,ImagePointProcessJob,ImageJob,Approach,Approach Type,QuickSafe,21.132
+,,,,Z Scanner Position,0
+2022/05/23 05:01:14,ImagePointProcessJob,ImageJob,Auto Set Point,Auto Set Point Type,Amplitude proportional,1.343
+,,,,Real Amplitude,9.90
+,,,,Corrected Set Point,8.91
+2022/05/23 05:01:16,ImagePointProcessJob,ImageJob,Set scan params,Scan Direction,?,1.721
+,,,,Slow Scan Reverse,false
+,,,,X Scan Size,15
+,,,,Y Scan Size,15
+,,,,X Pixel Size,2048
+,,,,Y Pixel Size,64
+,,,,X Offset,-0.609146
+,,,,Y Offset,-2.287809
+2022/05/23 05:03:38,ImagePointProcessJob,ImageJob,Image,-,-,142.528
+2022/05/23 05:03:38,ImagePointProcessJob,ImageJob,DONE,-,-,0.00,246.266
+2022/05/23 05:03:38,DefaultImagePointProcessJob,ImagePointProcessJob,DONE,-,-,0.00,246.266
+2022/05/23 05:03:39,DefaultSiteProcessJob,DefaultImagePointProcessJob,DONE,-,-,0.129,246.395
+2022/05/23 05:03:39,SampleSequenceJob,DefaultSiteProcessJob,DONE,-,-,0.737,247.132
+2022/05/23 05:03:39,SampleSequenceJob,DefaultSiteProcessJob,STARTED,-,-
+2022/05/23 05:03:39,DefaultSiteProcessJob,DefaultImagePointProcessJob,STARTED,-,-
+2022/05/23 05:03:39,DefaultImagePointProcessJob,ImagePointProcessJob,STARTED,-,-
+2022/05/23 05:03:39,ImagePointProcessJob,FanSpeedControlJob,STARTED,-,-
+2022/05/23 05:03:40,ImagePointProcessJob,FanSpeedControlJob,Set fan speed,Fan Speed,60,0.325
+2022/05/23 05:03:40,ImagePointProcessJob,FanSpeedControlJob,DONE,-,-,0.001,247.615
+2022/05/23 05:03:40,ImagePointProcessJob,PositioningJob,STARTED,-,-
+2022/05/23 05:03:41,ImagePointProcessJob,PositioningJob,Move Z stage,Z Position,10260.82,1.49
+2022/05/23 05:03:41,ImagePointProcessJob,PositioningJob,Rotates to Center,-,-,0.055
+2022/05/23 05:03:44,ImagePointProcessJob,PositioningJob,Move XY,X Position,72258.92,3.148
+,,,,Y Position,-106.81
+,,,,Stage Coordinate,true
+2022/05/23 05:03:44,ImagePointProcessJob,PositioningJob,DONE,-,-,0.00,252.308
+2022/05/23 05:03:44,ImagePointProcessJob,ImageInitJob,STARTED,-,-
+2022/05/23 05:03:46,ImagePointProcessJob,ImageInitJob,Initialize image mode,-,-,1.373
+2022/05/23 05:03:46,ImagePointProcessJob,ImageInitJob,DONE,-,-,0.001,253.682
+2022/05/23 05:03:46,ImagePointProcessJob,ZPositioningJob,STARTED,-,-
+2022/05/23 05:03:54,ImagePointProcessJob,ZPositioningJob,Sample auto focus,Fine Only,false,8.108
+,,,,Autofocus ID - Sample,
+2022/05/23 05:03:54,ImagePointProcessJob,ZPositioningJob,Save the autofocus result,Focus Distance,1153.953486,0.00
+,,,,Focus Position - Tip,4797.38
+,,,,Z Position - Sample,10260.738405
+,,,,Focus Position - Sample,3643.426514
+2022/05/23 05:03:55,ImagePointProcessJob,ZPositioningJob,Sample pattern align - coarse & center,-,-,0.888
+2022/05/23 05:03:56,ImagePointProcessJob,ZPositioningJob,Move Focus & Z to sample,Focus Position - Tip,4797.38,1.57
+,,,,Move Z,-253.953486
+2022/05/23 05:03:58,ImagePointProcessJob,ZPositioningJob,DONE,-,-,1.795,266.043
+2022/05/23 05:03:58,ImagePointProcessJob,FanSpeedControlJob,STARTED,-,-
+2022/05/23 05:03:58,ImagePointProcessJob,FanSpeedControlJob,Set fan speed,Fan Speed,10,0.254
+2022/05/23 05:03:58,ImagePointProcessJob,FanSpeedControlJob,DONE,-,-,0.00,266.297
+2022/05/23 05:03:58,ImagePointProcessJob,ImageJob,STARTED,-,-
+2022/05/23 05:04:06,ImagePointProcessJob,ImageJob,Sweep frequency,Amplitude Only,true,7.086
+,,,,Intermittent,false
+,,,,Amplitude,9.92
+,,,,Set Point,0.005954
+2022/05/23 05:04:27,ImagePointProcessJob,ImageJob,Approach,Approach Type,QuickSafe,21.205
+,,,,Z Scanner Position,0
+2022/05/23 05:04:28,ImagePointProcessJob,ImageJob,Auto Set Point,Auto Set Point Type,Amplitude proportional,1.365
+,,,,Real Amplitude,9.93
+,,,,Corrected Set Point,8.94
+2022/05/23 05:04:30,ImagePointProcessJob,ImageJob,Set scan params,Scan Direction,?,1.584
+,,,,Slow Scan Reverse,false
+,,,,X Scan Size,15
+,,,,Y Scan Size,15
+,,,,X Pixel Size,2048
+,,,,Y Pixel Size,64
+,,,,X Offset,0.495647
+,,,,Y Offset,-1.062264
+2022/05/23 05:06:52,ImagePointProcessJob,ImageJob,Image,-,-,142.608
+2022/05/23 05:06:52,ImagePointProcessJob,ImageJob,DONE,-,-,0.00,440.145
+2022/05/23 05:06:52,DefaultImagePointProcessJob,ImagePointProcessJob,DONE,-,-,0.00,440.145
+2022/05/23 05:06:52,DefaultSiteProcessJob,DefaultImagePointProcessJob,DONE,-,-,0.093,440.238
+2022/05/23 05:06:53,SampleSequenceJob,DefaultSiteProcessJob,DONE,-,-,0.756,440.994
+2022/05/23 05:06:53,SampleSequenceJob,DefaultSiteProcessJob,STARTED,-,-
+2022/05/23 05:06:53,DefaultSiteProcessJob,DefaultImagePointProcessJob,STARTED,-,-
+2022/05/23 05:06:53,DefaultImagePointProcessJob,ImagePointProcessJob,STARTED,-,-
+2022/05/23 05:06:53,ImagePointProcessJob,FanSpeedControlJob,STARTED,-,-
+2022/05/23 05:06:54,ImagePointProcessJob,FanSpeedControlJob,Set fan speed,Fan Speed,60,0.296
+2022/05/23 05:06:54,ImagePointProcessJob,FanSpeedControlJob,DONE,-,-,0.001,441.455
+2022/05/23 05:06:54,ImagePointProcessJob,PositioningJob,STARTED,-,-
+2022/05/23 05:06:55,ImagePointProcessJob,PositioningJob,Move Z stage,Z Position,10260.82,1.478
+2022/05/23 05:06:55,ImagePointProcessJob,PositioningJob,Rotates to Center,-,-,0.019
+2022/05/23 05:06:58,ImagePointProcessJob,PositioningJob,Move XY,X Position,74.92,3.167
+,,,,Y Position,81493.19
+,,,,Stage Coordinate,true
+2022/05/23 05:06:58,ImagePointProcessJob,PositioningJob,DONE,-,-,0.00,446.119
+2022/05/23 05:06:58,ImagePointProcessJob,ImageInitJob,STARTED,-,-
+2022/05/23 05:06:59,ImagePointProcessJob,ImageInitJob,Initialize image mode,-,-,0.991
+2022/05/23 05:06:59,ImagePointProcessJob,ImageInitJob,DONE,-,-,0.00,447.11
+2022/05/23 05:06:59,ImagePointProcessJob,ZPositioningJob,STARTED,-,-
+2022/05/23 05:07:07,ImagePointProcessJob,ZPositioningJob,Sample auto focus,Fine Only,false,8.159
+,,,,Autofocus ID - Sample,
+2022/05/23 05:07:07,ImagePointProcessJob,ZPositioningJob,Save the autofocus result,Focus Distance,1170.958613,0.00
+,,,,Focus Position - Tip,4797.38
+,,,,Z Position - Sample,10260.738405
+,,,,Focus Position - Sample,3626.421387
+2022/05/23 05:07:08,ImagePointProcessJob,ZPositioningJob,Sample pattern align - coarse & center,-,-,0.895
+2022/05/23 05:07:10,ImagePointProcessJob,ZPositioningJob,Move Focus & Z to sample,Focus Position - Tip,4797.38,1.573
+,,,,Move Z,-270.958613
+2022/05/23 05:07:11,ImagePointProcessJob,ZPositioningJob,DONE,-,-,1.568,459.305
+2022/05/23 05:07:11,ImagePointProcessJob,FanSpeedControlJob,STARTED,-,-
+2022/05/23 05:07:12,ImagePointProcessJob,FanSpeedControlJob,Set fan speed,Fan Speed,10,0.219
+2022/05/23 05:07:12,ImagePointProcessJob,FanSpeedControlJob,DONE,-,-,0.00,459.524
+2022/05/23 05:07:12,ImagePointProcessJob,ImageJob,STARTED,-,-
+2022/05/23 05:07:19,ImagePointProcessJob,ImageJob,Sweep frequency,Amplitude Only,true,7.635
+,,,,Intermittent,false
+,,,,Amplitude,9.92
+,,,,Set Point,0.005954
+2022/05/23 05:07:40,ImagePointProcessJob,ImageJob,Approach,Approach Type,QuickSafe,21.123
+,,,,Z Scanner Position,0
+2022/05/23 05:07:42,ImagePointProcessJob,ImageJob,Auto Set Point,Auto Set Point Type,Amplitude proportional,1.34
+,,,,Real Amplitude,9.45
+,,,,Corrected Set Point,8.51
+2022/05/23 05:07:43,ImagePointProcessJob,ImageJob,Set scan params,Scan Direction,?,1.134
+,,,,Slow Scan Reverse,false
+,,,,X Scan Size,15
+,,,,Y Scan Size,15
+,,,,X Pixel Size,2048
+,,,,Y Pixel Size,64
+,,,,X Offset,-1.475566
+,,,,Y Offset,0.190534
+2022/05/23 05:10:06,ImagePointProcessJob,ImageJob,Image,-,-,142.638
+2022/05/23 05:10:06,ImagePointProcessJob,ImageJob,DONE,-,-,0.00,633.394
+2022/05/23 05:10:06,DefaultImagePointProcessJob,ImagePointProcessJob,DONE,-,-,0.00,633.394
+2022/05/23 05:10:06,DefaultSiteProcessJob,DefaultImagePointProcessJob,DONE,-,-,0.073,633.467
+2022/05/23 05:10:06,SampleSequenceJob,DefaultSiteProcessJob,DONE,-,-,0.849,634.316
+2022/05/23 05:10:06,SampleSequenceJob,DefaultSiteProcessJob,STARTED,-,-
+2022/05/23 05:10:07,DefaultSiteProcessJob,DefaultImagePointProcessJob,STARTED,-,-
+2022/05/23 05:10:07,DefaultImagePointProcessJob,ImagePointProcessJob,STARTED,-,-
+2022/05/23 05:10:07,ImagePointProcessJob,FanSpeedControlJob,STARTED,-,-
+2022/05/23 05:10:07,ImagePointProcessJob,FanSpeedControlJob,Set fan speed,Fan Speed,60,0.523
+2022/05/23 05:10:07,ImagePointProcessJob,FanSpeedControlJob,DONE,-,-,0.00,634.984
+2022/05/23 05:10:07,ImagePointProcessJob,PositioningJob,STARTED,-,-
+2022/05/23 05:10:09,ImagePointProcessJob,PositioningJob,Move Z stage,Z Position,10260.82,1.452
+2022/05/23 05:10:09,ImagePointProcessJob,PositioningJob,Rotates to Center,-,-,0.021
+2022/05/23 05:10:13,ImagePointProcessJob,PositioningJob,Move XY,X Position,-72109.08,3.916
+,,,,Y Position,-106.81
+,,,,Stage Coordinate,true
+2022/05/23 05:10:13,ImagePointProcessJob,PositioningJob,DONE,-,-,0.00,640.373
+2022/05/23 05:10:13,ImagePointProcessJob,ImageInitJob,STARTED,-,-
+2022/05/23 05:10:13,ImagePointProcessJob,ImageInitJob,Initialize image mode,-,-,0.948
+2022/05/23 05:10:13,ImagePointProcessJob,ImageInitJob,DONE,-,-,0.00,641.321
+2022/05/23 05:10:13,ImagePointProcessJob,ZPositioningJob,STARTED,-,-
+2022/05/23 05:10:22,ImagePointProcessJob,ZPositioningJob,Sample auto focus,Fine Only,false,8.044
+,,,,Autofocus ID - Sample,
+2022/05/23 05:10:22,ImagePointProcessJob,ZPositioningJob,Save the autofocus result,Focus Distance,1198.784785,0.00
+,,,,Focus Position - Tip,4797.38
+,,,,Z Position - Sample,10260.738405
+,,,,Focus Position - Sample,3598.595215
+2022/05/23 05:10:22,ImagePointProcessJob,ZPositioningJob,Sample pattern align - coarse & center,-,-,0.896
+2022/05/23 05:10:24,ImagePointProcessJob,ZPositioningJob,Move Focus & Z to sample,Focus Position - Tip,4797.38,1.593
+,,,,Move Z,-298.784785
+2022/05/23 05:10:25,ImagePointProcessJob,ZPositioningJob,DONE,-,-,1.347,653.201
+2022/05/23 05:10:25,ImagePointProcessJob,FanSpeedControlJob,STARTED,-,-
+2022/05/23 05:10:26,ImagePointProcessJob,FanSpeedControlJob,Set fan speed,Fan Speed,10,0.389
+2022/05/23 05:10:26,ImagePointProcessJob,FanSpeedControlJob,DONE,-,-,0.00,653.59
+2022/05/23 05:10:26,ImagePointProcessJob,ImageJob,STARTED,-,-
+2022/05/23 05:10:32,ImagePointProcessJob,ImageJob,Sweep frequency,Amplitude Only,true,6.516
+,,,,Intermittent,false
+,,,,Amplitude,9.92
+,,,,Set Point,0.005954
+2022/05/23 05:10:53,ImagePointProcessJob,ImageJob,Approach,Approach Type,QuickSafe,21.159
+,,,,Z Scanner Position,0
+2022/05/23 05:10:55,ImagePointProcessJob,ImageJob,Auto Set Point,Auto Set Point Type,Amplitude proportional,1.402
+,,,,Real Amplitude,9.89
+,,,,Corrected Set Point,8.90
+2022/05/23 05:10:57,ImagePointProcessJob,ImageJob,Set scan params,Scan Direction,?,2.381
+,,,,Slow Scan Reverse,false
+,,,,X Scan Size,15
+,,,,Y Scan Size,15
+,,,,X Pixel Size,2048
+,,,,Y Pixel Size,64
+,,,,X Offset,-1.877797
+,,,,Y Offset,-1.670683
+2022/05/23 05:13:20,ImagePointProcessJob,ImageJob,Image,-,-,142.355
+2022/05/23 05:13:20,ImagePointProcessJob,ImageJob,DONE,-,-,0.00,827.403
+2022/05/23 05:13:20,DefaultImagePointProcessJob,ImagePointProcessJob,DONE,-,-,0.00,827.403
+2022/05/23 05:13:20,DefaultSiteProcessJob,DefaultImagePointProcessJob,DONE,-,-,0.097,827.50
+2022/05/23 05:13:21,SampleSequenceJob,DefaultSiteProcessJob,DONE,-,-,0.963,828.463
+2022/05/23 05:13:21,SampleSequenceJob,DefaultSiteProcessJob,STARTED,-,-
+2022/05/23 05:13:21,DefaultSiteProcessJob,DefaultImagePointProcessJob,STARTED,-,-
+2022/05/23 05:13:21,DefaultImagePointProcessJob,ImagePointProcessJob,STARTED,-,-
+2022/05/23 05:13:21,ImagePointProcessJob,FanSpeedControlJob,STARTED,-,-
+2022/05/23 05:13:21,ImagePointProcessJob,FanSpeedControlJob,Set fan speed,Fan Speed,60,0.366
+2022/05/23 05:13:21,ImagePointProcessJob,FanSpeedControlJob,DONE,-,-,0.00,828.973
+2022/05/23 05:13:21,ImagePointProcessJob,PositioningJob,STARTED,-,-
+2022/05/23 05:13:23,ImagePointProcessJob,PositioningJob,Move Z stage,Z Position,10260.82,1.447
+2022/05/23 05:13:23,ImagePointProcessJob,PositioningJob,Rotates to Center,-,-,0.021
+2022/05/23 05:13:27,ImagePointProcessJob,PositioningJob,Move XY,X Position,74.92,3.938
+,,,,Y Position,-81706.81
+,,,,Stage Coordinate,true
+2022/05/23 05:13:27,ImagePointProcessJob,PositioningJob,DONE,-,-,0.001,834.38
+2022/05/23 05:13:27,ImagePointProcessJob,ImageInitJob,STARTED,-,-
+2022/05/23 05:13:28,ImagePointProcessJob,ImageInitJob,Initialize image mode,-,-,1.58
+2022/05/23 05:13:28,ImagePointProcessJob,ImageInitJob,DONE,-,-,0.00,835.96
+2022/05/23 05:13:28,ImagePointProcessJob,ZPositioningJob,STARTED,-,-
+2022/05/23 05:13:36,ImagePointProcessJob,ZPositioningJob,Sample auto focus,Fine Only,false,8.102
+,,,,Autofocus ID - Sample,
+2022/05/23 05:13:36,ImagePointProcessJob,ZPositioningJob,Save the autofocus result,Focus Distance,1178.354365,0.00
+,,,,Focus Position - Tip,4797.38
+,,,,Z Position - Sample,10260.978405
+,,,,Focus Position - Sample,3619.025635
+2022/05/23 05:13:37,ImagePointProcessJob,ZPositioningJob,Sample pattern align - coarse & center,-,-,0.885
+2022/05/23 05:13:39,ImagePointProcessJob,ZPositioningJob,Move Focus & Z to sample,Focus Position - Tip,4797.38,1.592
+,,,,Move Z,-278.354365
+2022/05/23 05:13:40,ImagePointProcessJob,ZPositioningJob,DONE,-,-,1.366,847.905
+2022/05/23 05:13:40,ImagePointProcessJob,FanSpeedControlJob,STARTED,-,-
+2022/05/23 05:13:40,ImagePointProcessJob,FanSpeedControlJob,Set fan speed,Fan Speed,10,0.276
+2022/05/23 05:13:40,ImagePointProcessJob,FanSpeedControlJob,DONE,-,-,0.00,848.181
+2022/05/23 05:13:40,ImagePointProcessJob,ImageJob,STARTED,-,-
+2022/05/23 05:13:47,ImagePointProcessJob,ImageJob,Sweep frequency,Amplitude Only,true,6.903
+,,,,Intermittent,false
+,,,,Amplitude,9.92
+,,,,Set Point,0.005954
+2022/05/23 05:14:08,ImagePointProcessJob,ImageJob,Approach,Approach Type,QuickSafe,21.157
+,,,,Z Scanner Position,0
+2022/05/23 05:14:11,ImagePointProcessJob,ImageJob,Auto Set Point,Auto Set Point Type,Amplitude proportional,2.344
+,,,,Real Amplitude,9.98
+,,,,Corrected Set Point,8.98
+2022/05/23 05:14:12,ImagePointProcessJob,ImageJob,Set scan params,Scan Direction,?,0.96
+,,,,Slow Scan Reverse,false
+,,,,X Scan Size,15
+,,,,Y Scan Size,15
+,,,,X Pixel Size,2048
+,,,,Y Pixel Size,64
+,,,,X Offset,-1.815921
+,,,,Y Offset,-1.19773
+2022/05/23 05:16:34,ImagePointProcessJob,ImageJob,Image,-,-,142.432
+2022/05/23 05:16:34,ImagePointProcessJob,ImageJob,DONE,-,-,0.00,1021.977
+2022/05/23 05:16:34,DefaultImagePointProcessJob,ImagePointProcessJob,DONE,-,-,0.00,1021.977
+2022/05/23 05:16:34,DefaultSiteProcessJob,DefaultImagePointProcessJob,DONE,-,-,0.072,1022.049
+2022/05/23 05:16:35,SampleSequenceJob,DefaultSiteProcessJob,DONE,-,-,0.858,1022.907
+2022/05/23 05:16:35,AutoSampleProcessKernelJob,SampleSequenceJob,DONE,-,-,0.003,1022.91
+2022/05/23 05:16:35,AutoSampleProcessKernelJob,FanSpeedControlJob,STARTED,-,-
+2022/05/23 05:16:35,AutoSampleProcessKernelJob,FanSpeedControlJob,Set fan speed,Fan Speed,60,0.373
+2022/05/23 05:16:35,AutoSampleProcessKernelJob,FanSpeedControlJob,DONE,-,-,0.00,1023.283
+2022/05/23 05:16:35,AutoSampleProcessKernelJob,InitPositioningJob,STARTED,-,-
+2022/05/23 05:16:41,AutoSampleProcessKernelJob,InitPositioningJob,Move Z safely,Z Position,18000,5.273
+2022/05/23 05:16:42,AutoSampleProcessKernelJob,InitPositioningJob,Clear scan params,-,-,1.452
+2022/05/23 05:16:42,AutoSampleProcessKernelJob,InitPositioningJob,Init rotation stage,-,-,0.002
+2022/05/23 05:16:44,AutoSampleProcessKernelJob,InitPositioningJob,Ionizer off,-,-,1.399
+2022/05/23 05:16:44,AutoSampleProcessKernelJob,InitPositioningJob,Set fan speed,Fan Speed,60,0.00
+2022/05/23 05:16:44,AutoSampleProcessKernelJob,InitPositioningJob,DONE,-,-,0.00,1031.409
+2022/05/23 05:16:44,AutoSampleProcessJob,AutoSampleProcessKernelJob,DONE,-,-,0.00,1031.409
+2022/05/23 05:16:48,AutoSampleProcessJob,UnloadJob,STARTED,-,-
+2022/05/23 05:17:03,AutoSampleProcessJob,UnloadJob,Unload from stage (Lower),-,-,15.268
+2022/05/23 05:17:07,AutoSampleProcessJob,UnloadJob,Load to port (Lower),Port No,1,3.964
+,,,,Slot No,6
+2022/05/23 05:17:07,AutoSampleProcessJob,UnloadJob,DONE,-,-,0.00,1054.977
+2022/05/23 05:17:07,PortSequenceJob,AutoSampleProcessJob,DONE,-,-,0.00,1054.977

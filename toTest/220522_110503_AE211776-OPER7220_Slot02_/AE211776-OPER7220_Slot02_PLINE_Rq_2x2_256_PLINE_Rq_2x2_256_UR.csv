@@ -1,0 +1,15 @@
+Lot ID,AE211776-OPER7220
+Recipe ID,PLINE\Blanket\Rq_B02_2x2_256
+Carrier ID,007762310000IMEC
+Sample Location,Port 2 Slot 2
+Sample ID,Slot02
+Data Save Location,D:\DataLog\Automation Image\220522_110503_AE211776-OPER7220_Slot02_
+
+Tip ID,AC160_Rough
+Tip Cassette ID,Cassette1
+Tip Port No,1
+Tip Slot No,4
+
+Point No,X (um),Y (um),Method ID,State,_Range (nm),_Ra (nm),_Rq (nm),
+1,0.0,0.0,PLINE_Rq_2x2_256,COMPLETED,6.122,0.536,0.676,
+2,120000.0,0.0,PLINE_Rq_2x2_256,COMPLETED,5.089,0.446,0.555,
