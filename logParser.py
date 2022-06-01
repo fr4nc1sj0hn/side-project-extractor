@@ -8,6 +8,7 @@ import config as cfg
 import datetime
 import time
 from support import get_SP_drive, save_file_to_SP_folder, send_failure_mail
+import shutil
 
 
 class LogParser():
@@ -29,6 +30,19 @@ class LogParser():
                 files = [path + f for f in listdir(self.path) if isfile(join(self.path, f))]
                 for file in files:
                     self.ParseLogs(file)
+                    logfile = file.replace(path,"")
+
+                    dateinfo = "20" + logfile.split("-")[1].replace(".log","")
+                    yearmonth = dateinfo[:4] + dateinfo[4:6]
+                    archivefolder = path + yearmonth
+
+                    if not os.path.isdir(archivefolder):
+                        os.mkdir(archivefolder)
+                    
+                    path1 = file
+                    path2 = archivefolder + "/" + logfile
+                    shutil.move(path1,path2)
+
             else:
                 self.ParseLogs(self.path)
         
