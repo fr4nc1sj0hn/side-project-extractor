@@ -17,7 +17,7 @@ SP_cfg = {
 fname_prefix = "OS"
 
 
-logfolderlocation = "C:/Users/Francis John Picaso/Repositories/Teo/logs/"
+logfolderlocation = "//LAPTOP-UONIE73C/Temp/Logs/"
 isFolder = 'Y'
 LocalCSVLocation = "C:/Users/Francis John Picaso/Repositories/Teo/Output/"
 UploadToSharePoint = "N"
