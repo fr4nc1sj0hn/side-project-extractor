@@ -153,6 +153,29 @@ def ParseTR3400FinalLog():
 	FinalOutput = FinalOutput.sort_values(['Lot','Job Name','Wafer','DateTime','Slot'],
                   ascending=[True, True,True,True,True])
 
+
+	#Lots
+	lots = FinalOutput["Lot"].unique()
+	lots = list(lots)
+	lotIds = list(range(1,len(lots) + 1))
+	lotsdf = pd.DataFrame()
+	lotsdf["LotID"] = lotIds
+	lotsdf["Lot"] = lots
+
+	LotsCSV = outputfolder + 'Lots.csv'
+	lotsdf.to_csv(LotsCSV)
+
+	#Join
+	FinalOutput = pd.merge(
+	    FinalOutput,
+	    lotsdf,
+	    how="inner",
+	    left_on=["Lot"],
+	    right_on=["Lot"],
+	    sort=True,
+	    suffixes=("_x", "_y")
+	)
+
 	finalCSV = outputfolder + 'TR3400Final.csv'
 	FinalOutput.to_csv(finalCSV)
 	        
